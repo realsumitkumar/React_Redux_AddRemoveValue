@@ -1,72 +1,35 @@
-# Getting Started with Create React App
+Redux Shop App
+This is a simple Redux app that allows users to deposit or withdraw money from their balance.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+bash
+Copy code
+cd redux-shop-app
+Install the dependencies:
 
-## Available Scripts
+bash
+Copy code
+npm install
+Start the development server:
 
-In the project directory, you can run:
+bash
+Copy code
+npm start
+Open your browser and visit http://localhost:3000 to view the app.
 
-### `npm start`
+Usage
+Click the "-" button to withdraw money from your balance.
+Click the "+" button to deposit money into your balance.
+The balance amount will be updated accordingly.
+Redux Implementation
+The Redux implementation in this app follows the standard structure with actions, reducers, and the store.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Actions: The depositMoney and withdrawMoney action creators in src/state/index.js dispatch the corresponding actions with the amount parameter as the payload.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Reducers: The amountReducer in src/reducers.js handles the state updates based on the dispatched actions.
 
-### `npm test`
+Store: The Redux store is created in src/store.js and combines the reducers using combineReducers from the redux library.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React Components: The Shop component in src/Shop.js uses useSelector to access the amount state from the Redux store and useDispatch to dispatch the actions using the withdrawMoney and depositMoney functions.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# React_Redux_AddRemoveValue" 
-"# React_Redux_AddRemoveValue" 
+Acknowledgments
+This app is a simple example of using Redux in a React application. It can serve as a starting point for more complex Redux implementations.
